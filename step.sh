@@ -12,7 +12,8 @@ fi
 envman add --key APP_CENTER_APP_ID
 envman add --key APP_CENTER_ACCESS_TOKEN
 envman add --key APP_CENTER_DISTRIBUTION_GROUP
+envman add --key APP_CENTER_BUILD_MESSAGE
 
-appcenter distribute release -f "${BITRISE_IPA_PATH}" -r "bitrise build" -a "${APP_CENTER_APP_ID}" --token "${APP_CENTER_ACCESS_TOKEN}" -g "${APP_CENTER_DISTRIBUTION_GROUP}" --quiet
+appcenter distribute release -f "${BITRISE_IPA_PATH}" -r "${APP_CENTER_BUILD_MESSAGE}" -a "${APP_CENTER_APP_ID}" --token "${APP_CENTER_ACCESS_TOKEN}" -g "${APP_CENTER_DISTRIBUTION_GROUP}" --quiet
 
 exit 0
