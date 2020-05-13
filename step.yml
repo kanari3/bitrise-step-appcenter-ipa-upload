@@ -55,8 +55,8 @@ inputs:
       is_required: true
       
   - build_message: $APP_CENTER_BUILD_MESSAGE
-      opts:
-        title: AppCenter Build Message to share in the build.
-        description: |
-          Build message that will appear under the build in AppCenter's list of builds.
-        is_required: true
+    opts:
+      title: AppCenter Build Message to share in the build.
+      description: |
+        Build message that will appear under the build in AppCenter's list of builds.
+      is_required: true
