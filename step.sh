@@ -18,6 +18,6 @@ if [ -z "${APP_CENTER_BUILD_MESSAGE}" ] ; then
   APP_CENTER_BUILD_MESSAGE="no message"
 fi
 
-appcenter distribute release -f "${BITRISE_IPA_PATH}" -r "${APP_CENTER_BUILD_MESSAGE}" -a "${APP_CENTER_APP_ID}" --token "${APP_CENTER_ACCESS_TOKEN}" -g "${APP_CENTER_DISTRIBUTION_GROUP}" --quiet
+appcenter distribute release -f "${BITRISE_IPA_PATH}" -r "${APP_CENTER_BUILD_MESSAGE}" -a "${APP_CENTER_APP_ID}" --token "${APP_CENTER_ACCESS_TOKEN}" -g "${APP_CENTER_DISTRIBUTION_GROUP}" --silent
 
 exit 0
