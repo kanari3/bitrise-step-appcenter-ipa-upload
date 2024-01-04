@@ -9,15 +9,15 @@ else
   npm install -g appcenter-cli
 fi
 
-envman add --key APP_CENTER_APP_ID
-envman add --key APP_CENTER_ACCESS_TOKEN
-envman add --key APP_CENTER_DISTRIBUTION_GROUP
-envman add --key APP_CENTER_BUILD_MESSAGE
+envman add --key app_id
+envman add --key api_token
+envman add --key distribution_group
+envman add --key build_message
 
-if [ -z "${APP_CENTER_BUILD_MESSAGE}" ] ; then
-  APP_CENTER_BUILD_MESSAGE="no message"
+if [ -z "${build_message}" ] ; then
+  build_message="no message"
 fi
 
-appcenter distribute release -f "${BITRISE_IPA_PATH}" -r "${APP_CENTER_BUILD_MESSAGE}" -a "${APP_CENTER_APP_ID}" --token "${APP_CENTER_ACCESS_TOKEN}" -g "${APP_CENTER_DISTRIBUTION_GROUP}" --quiet
+appcenter distribute release -f "${BITRISE_IPA_PATH}" -r "${build_message}" -a "${app_id}" --token "${api_token}" -g "${distribution_group}" --quiet
 
 exit 0
